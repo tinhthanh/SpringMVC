@@ -1,1 +1,3 @@
+com\palltech\model\User.class
+com\palltech\model\Authorities.class
 com\palltech\controller\HomeController.class

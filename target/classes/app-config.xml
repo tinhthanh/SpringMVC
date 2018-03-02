@@ -8,7 +8,13 @@
 
     <context:component-scan base-package="com.palltech.*" />
     <context:property-placeholder location="classpath:persistence-mysql.properties" />
-     <bean id="sessionFactory"
+    
+    <bean id="SessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="configLocation" value="classpath:hibernate.cfg.xml"></property>
+		<property name="packagesToScan" value="com.palltech.model"></property>	
+	</bean>
+    <!--// cách 2 cấu hình sessitionFactory, chú ý cung cấp thư viện org.apache.tomcat.dbcp.dbcp.BasicDataSource-->
+<!--     <bean id="sessionFactory"
            class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
       <property name="dataSource" ref="dataSource" />
       <property name="packagesToScan" value="com.palltech.model" />
@@ -25,9 +31,10 @@
       <property name="url" value="${jdbc.url}" />
       <property name="username" value="${jdbc.user}" />
       <property name="password" value="${jdbc.pass}" />
-   </bean>
-    <bean id="transactionManager"
+   </bean>-->
+<!--    <bean id="transactionManager"
     class="org.springframework.orm.hibernate4.HibernateTransactionManager">
       <property name="sessionFactory" ref="sessionFactory" />
-   </bean>
+   </bean>-->
+   <!--// kết thúc cách 2-->
 </beans>
