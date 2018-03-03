@@ -1,3 +1,7 @@
+com\palltech\service\UserService.class
+com\palltech\repository\UserRepository.class
+com\palltech\repository\imp\UserRepositoryImp.class
 com\palltech\model\User.class
 com\palltech\model\Authorities.class
+com\palltech\service\imp\UserServiceImp.class
 com\palltech\controller\HomeController.class

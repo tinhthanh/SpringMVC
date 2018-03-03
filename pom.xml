@@ -10,9 +10,16 @@
     <name>Spring4Xml</name>
 
     <properties>
+        <spring-test.version>5.0.2.RELEASE</spring-test.version>
+        
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.version>4.2.6.RELEASE</spring.version>
+        
+         <log4j-core.version>2.10.0</log4j-core.version> 
+		<log4j-api.version>2.10.0</log4j-api.version>
+                
+       
     </properties>
     
     <dependencies>
@@ -27,11 +34,26 @@
             <artifactId>spring-orm</artifactId>
             <version>4.0.3.RELEASE</version>
         </dependency>
-<!--        <dependency>
+        <!--        <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-dbcp</artifactId>
             <version>7.0.55</version>
         </dependency>-->
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+      <dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-test</artifactId>
+		    <version>${spring-test.version}</version>
+		    <scope>test</scope>
+		</dependency>
+                
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -55,6 +77,21 @@
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
+        
+        <!--// write logs-->
+<!--        <dependency>
+		    <groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-core</artifactId>
+		    <version>${log4j-core.version}</version>
+		</dependency>
+		
+         https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api 
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j-api.version}</version>
+        </dependency>-->
+                        
     </dependencies>
 
     <build>
